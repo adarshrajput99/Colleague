@@ -2,7 +2,7 @@ import admin.cloud_manager
 import os
 import admin.conflict_manger
 
-#my new change
+#my new change haha
 def curr_d():
     x = os.path.split(os.getcwd())
     return x[0]
