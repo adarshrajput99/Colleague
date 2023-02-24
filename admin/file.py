@@ -87,7 +87,11 @@ class file_interface_download:
         self.get_f = tkinter.Label(self.root, text="Get available files", font=('Helvetica', 12, "bold"))
         self.get_f.place(x=80, y=0)
         self.var = tkinter.StringVar(self.root)
-        self.get_file_fd = tkinter.OptionMenu(self.root, self.var, *list_files)
+        try:
+            self.get_file_fd = tkinter.OptionMenu(self.root, self.var, *list_files)
+        except Exception as e:
+            print(e)
+            return
         self.get_file_fd.config(text="Avaialable files", width=28, height=1, font=('Helvetica', 12))
         self.get_file_fd.place(x=0, y=35)
         self.var.set("Avail files")

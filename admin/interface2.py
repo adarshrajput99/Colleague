@@ -74,7 +74,7 @@ class interface_2:
             self.text = "Your network is slow"
             staus = False
         else:
-            self.text = "* Denotes mandatory\n Collect you Password and \nEmp_id from Admin\n\nWelcome to Colleague"
+            self.text = "* Denotes mandatory\n Collect you Password and \nEmp_id from Admin\n\nWelcome to GAMA"
 
         call_id = 0
         self.root = Tk()

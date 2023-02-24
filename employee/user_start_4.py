@@ -47,13 +47,13 @@ class user_start:
         user_name = Entry(self.root)
         user_join_lb = Label(text="Joined on :", fg="white", bg="black")
         user_join = Entry(self.root)
-        grade_lb = Label(text="Grade :", fg="white", bg="black")
+        grade_lb = Label(text="Capacity :", fg="white", bg="black")
         grade = Entry(self.root)
 
-        sal_lb = Label(self.root, text="Your salary will be in range: ", font=('Helvetica', 18, 'bold'), fg="white",
+        sal_lb = Label(self.root, text="Watching hours : ", font=('Helvetica', 18, 'bold'), fg="white",
                        bg="black")
-        start_lb = Label(text="Start from  :")
-        end_lb = Label(text="Upto           :")
+        start_lb = Label(text=":")
+        end_lb = Label(text="        :")
         file_lb = Label(text="Project", font=('Helvetica', 20, 'bold'), fg="white", bg="black")
         feedback_lb = Label(text="Feedback:(For last submission)", font=('Helvetica', 15, 'bold'))
         start = Entry(self.root)
@@ -87,14 +87,14 @@ class user_start:
         user_join.place(x=590, y=0)
         grade_lb.place(x=775, y=0)
         grade.place(x=825, y=0)
-        sal_lb.place(x=0, y=30)
-        start_lb.place(x=0, y=70)
-        end_lb.place(x=0, y=92)
-        start.place(x=75, y=70)
-        end.place(x=75, y=92)
+        #sal_lb.place(x=0, y=30)
+        #start_lb.place(x=0, y=70)
+        #end_lb.place(x=0, y=92)
+        #start.place(x=75, y=70)
+        #end.place(x=75, y=92)
         upload.place(x=400, y=70)
         download.place(x=600, y=70)
-        file_lb.place(x=550, y=30)
+        #file_lb.place(x=550, y=30)
         feedback.place(x=2, y=160)
         feedback.place(width=300, height=218)
         feedback_lb.place(x=0, y=130)
@@ -104,7 +104,7 @@ class user_start:
         project = Label(text="Project Details", font=('Helvetica', 16, 'bold', 'underline'))
         project.place(x=620, y=130)
         # LABEL
-        project1 = Label(text="\n    Active project  :\t\t\t\t   \n\n\tDue to  :\t\t\t\t   \n\n\tStatus :\t\t\t\t "
+        project1 = Label(text="\n    Active Room  :\t\t\t\t   \n\n\tDue to  :\t\t\t\t   \n\n\tStatus :\t\t\t\t "
                               "\n\n\tLast file upload :\t\t\t\t\t\n", font=('Helvetica', 12, 'bold'), anchor="s",
                          borderwidth=2, relief="solid")
         project1.place(x=440, y=160)
@@ -142,9 +142,9 @@ class user_start:
                 project_due.insert(END, proj_list[3])
                 project_active.insert(END, proj_list[1])
             except:
-                project_status.insert(END, "No project")
-                project_due.insert(END, "No project")
-                project_active.insert(END, "No project")
+                project_status.insert(END, "No Room")
+                project_due.insert(END, "No Room")
+                project_active.insert(END, "No Room")
             if x[7] == "No Feedback":
                 feedback.insert(END, "No Feedback")
             else:

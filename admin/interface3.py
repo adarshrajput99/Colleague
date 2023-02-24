@@ -29,24 +29,24 @@ class interface_3:
         head = Label(self.root, text="Menu", font=('Helvetica', 18, 'bold', 'underline'), bg='black', fg='white')
         head.place(x=460, y=40)
         # BUTTON
-        project = Button(self.root, text="Project list", width=20, height=2, bg='black', fg='white',
+        project = Button(self.root, text="Rooms list", width=20, height=2, bg='black', fg='white',
                          font=('Helvetica', 11, 'bold'),
                          command=project_manger.proj_list)
         project.place(x=0, y=390)
-        emp = Button(self.root, text="Employee Performance", width=20, height=2, bg='black', fg='white',
+        emp = Button(self.root, text="User perf", width=20, height=2, bg='black', fg='white',
                      font=('Helvetica', 11, 'bold'), command=employee_manger.emp_performance_set)
         emp.place(x=0, y=75)
-        add = Button(self.root, text="Add Employee", width=20, height=2, bg='black', fg='white',
+        add = Button(self.root, text="Add user", width=20, height=2, bg='black', fg='white',
                      font=('Helvetica', 11, 'bold'), command=employee_manger.add_emp)
         add.place(x=0, y=120)
-        remove = Button(self.root, text="Remove  Employee", width=20, height=2, bg='black', fg='white',
+        remove = Button(self.root, text="Remove  User", width=20, height=2, bg='black', fg='white',
                         font=('Helvetica', 11, 'bold'),
                         command=employee_manger.del_emp)
         remove.place(x=0, y=165)
-        assign = Button(self.root, text="Add Project", width=20, height=2, bg='black', fg='white',
+        assign = Button(self.root, text="Add Room", width=20, height=2, bg='black', fg='white',
                         font=('Helvetica', 11, 'bold'), command=project_manger.add_new_project)
         assign.place(x=0, y=210)
-        emp_grade = Button(self.root, text="Employee Ranking", width=20, height=2, bg='black', fg='white',
+        emp_grade = Button(self.root, text="Room List", width=20, height=2, bg='black', fg='white',
                            font=('Helvetica', 11, 'bold'), command=employee_manger.complete_emp_list)
         emp_grade.place(x=0, y=255)
         search = Button(self.root, text="Search", width=20, height=2, bg='black', fg='white',
@@ -73,19 +73,19 @@ class interface_3:
                                 font=('Helvetica', 11, 'bold'), command=self.site)
         self.site_down.place(x=810, y=164)
 
-        emp_working = Label(text="No. of emp working   :", font=('Helvetica', 11, 'bold'), fg="white", bg="black")
+        emp_working = Label(text="No. of Active user   :", font=('Helvetica', 11, 'bold'), fg="white", bg="black")
         emp_working.place(x=300, y=80)
         emp_working_fd = Entry(self.root)
         emp_working_fd.place(x=500, y=80)
         emp_working_fd.insert(END, self.e.get_no_of_emp())
 
-        total_proj = Label(text="Total no of project     :", font=('Helvetica', 11, 'bold'), fg="white", bg="black")
+        total_proj = Label(text="Total no of Active Room     :", font=('Helvetica', 11, 'bold'), fg="white", bg="black")
         total_proj.place(x=300, y=110)
         total_proj_fd = Entry(self.root)
         total_proj_fd.place(x=500, y=110)
         total_proj_fd.insert(END, self.p.get_no_of_proj())
 
-        total_proj_active = Label(text="Completed project     :", font=('Helvetica', 11, 'bold'), fg="white",
+        total_proj_active = Label(text="Finished Rooms     :", font=('Helvetica', 11, 'bold'), fg="white",
                                   bg="black")
         total_proj_active.place(x=300, y=140)
         total_proj_active_fd = Entry(self.root)
@@ -98,7 +98,7 @@ class interface_3:
         dropbox_token_fd.place(x=500, y=170)
         dropbox_token_fd.insert(END, self.c.token)
 
-        database_check_employee = Label(text="Emp database check :", font=('Helvetica', 11, 'bold'), fg="white",
+        database_check_employee = Label(text="User database check :", font=('Helvetica', 11, 'bold'), fg="white",
                                         bg="black")
         database_check_employee.place(x=300, y=200)
         database_check_employee_fd = Entry(self.root)
@@ -108,7 +108,7 @@ class interface_3:
         else:
             database_check_employee_fd.insert(END, "Not connected")
 
-        database_check_project = Label(text="Proj database check  :", font=('Helvetica', 11, 'bold'), fg="white",
+        database_check_project = Label(text="Rooms database check  :", font=('Helvetica', 11, 'bold'), fg="white",
                                        bg="black")
         database_check_project.place(x=300, y=230)
         database_check_project_fd = Entry(self.root)
@@ -118,7 +118,7 @@ class interface_3:
         else:
             database_check_project_fd.insert(END, "Not connected")
 
-        database_check_salary = Label(text="Sal database check    :", font=('Helvetica', 11, 'bold'), fg="white",
+        database_check_salary = Label(text="Files database check    :", font=('Helvetica', 11, 'bold'), fg="white",
                                       bg="black")
         database_check_salary.place(x=300, y=260)
         database_check_salary_fd = Entry(self.root)
@@ -143,15 +143,14 @@ class interface_3:
                         command=employee_manger.full_list_upload_download)
         commit.place(x=810, y=75)
 
-        commit = Button(self.root, text="Attendance", width=20, height=2, bg='black', fg='white',
+        commit = Button(self.root, text="Activity", width=20, height=2, bg='black', fg='white',
                         font=('Helvetica', 11, 'bold'),
                         command=employee_manger.attendance_cntrl)
         commit.place(x=810, y=300)
 
-        colleague_info = Label(text="Colleague(Limited user) v2.0\n(Class implementation,Proctoring,Conflict "
+        colleague_info = Label(text="GAMA(Limited user) \n(Class implementation,Proctoring,Conflict "
                                     "handling)\nServices used "
-                                    ":Cloud(Dropbox)\nProctoring:OpenCv\nDevelopers:\nAdarsh Singh\nAbhay Pratap "
-                                    "Singh\nGyan Prakash Kushwaha\nAkhilesh Kumar",
+                                    ":Cloud(Dropbox)",
                                bg='black', fg='white', font=('Helvetica', 11, 'bold'))
         colleague_info.place(x=310, y=300)
         self.root.mainloop()

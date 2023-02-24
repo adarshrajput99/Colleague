@@ -294,19 +294,19 @@ class emp_performance_set:
         self.root.title(" EMPLOYEE PERFORMANCE")
 
         # LAYOUT
-        self.emp_id_lb = Label(self.root, text="Employee id *")
+        self.emp_id_lb = Label(self.root, text="User id *")
         self.emp_id_lb.place(x=1, y=1)
         self.emp_id = Entry(self.root)
         self.emp_id.place(x=150, y=1)
-        self.emp_name = Label(self.root, text="Employee Name *")
+        self.emp_name = Label(self.root, text="Admin Name *")
         self.emp_name.place(x=1, y=30)
         self.emp_name_fd = Entry(self.root)
         self.emp_name_fd.place(x=150, y=30)
-        self.emp_project = Label(self.root, text="Employee Project")
+        self.emp_project = Label(self.root, text="No of room")
         self.emp_project.place(x=1, y=60)
         self.emp_project_fd = Entry(self.root)
         self.emp_project_fd.place(x=150, y=60)
-        self.emp_grade = Label(self.root, text="Employee Grade ")
+        self.emp_grade = Label(self.root, text="Capacity ")
         self.emp_grade.place(x=1, y=90)
         self.emp_grade_fd = Entry(self.root)
         self.emp_grade_fd.place(x=150, y=90)
@@ -341,7 +341,7 @@ class emp_performance_set:
                 sync(0)
             except Exception as e:
                 print(e)
-                self.response.config(text="error!!!!!")
+                self.response.config(text="*****")
 
     def out(self):
         self.root.destroy()
@@ -439,10 +439,10 @@ class complete_emp_list:
         n.grid(row=0, column=6)
         m.insert(END, "Activity")
         n.insert(END, "Activity_no")
-        f.insert(END, "EMP-ID")
-        g.insert(END, "Name")
-        h.insert(END, "Projects")
-        k.insert(END, "Grade")
+        f.insert(END, "USER-ID")
+        g.insert(END, "ADMIN")
+        h.insert(END, "ROOM")
+        k.insert(END, "LIMIT")
         l.insert(END, "Join_Date")
         for employee in cursor:
             for j in range(len(employee)):

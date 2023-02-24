@@ -9,7 +9,7 @@ class start_page_1:
         self.root.geometry("500x500")
         self.root.maxsize(500, 500)
         self.root.minsize(500, 500)
-        self.root.title("COLLEAGUE")
+        self.root.title("GAMA")
         photo = PhotoImage(file="asr.png")
         label = Button(image=photo, command=self.click)
         label.pack()
